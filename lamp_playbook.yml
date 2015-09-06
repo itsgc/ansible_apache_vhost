@@ -1,0 +1,8 @@
+ - hosts: vagrant
+   sudo: yes
+   vars_files:
+       - vars/mysql.yml
+       - vars/apache.yml
+   roles:
+       - { role: geerlingguy.mysql }
+       - { role: geerlingguy.apache }

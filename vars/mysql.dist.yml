@@ -18,4 +18,3 @@ mysql_daemon: mariadb
 mysql_log_error: /var/log/mariadb/mariadb.log
 mysql_syslog_tag: mysqld
 mysql_pid_file: /var/run/mariadb/mariadb.pid
-
