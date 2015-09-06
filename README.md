@@ -9,3 +9,9 @@ Currently uses ready-made roles. I need to find workarounds to a few issues, nam
 ## Requirements
 - Ansible role for MySQL - https://github.com/geerlingguy/ansible-role-mysql
 - Ansible role for Apache 2.x - https://github.com/geerlingguy/ansible-role-apache
+
+## TODO
+Stuff that needs to happen:
+* Vhosts created on the fly from hostvars rather than hardcoded data in vars/*.yml
+* Php and PhpMyAdmin installation, with per-vhost visibility and custom path for phpmyadmin (avoid /phpmyadmin)
+* Consider adding support to pull vhost doc files from git
