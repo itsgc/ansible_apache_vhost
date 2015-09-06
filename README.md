@@ -7,5 +7,5 @@ Currently uses ready-made roles. I need to find workarounds to a few issues, nam
 - All the actions involving a virtualhosts should be within a single task. One to add a vhost, one to remove it.
 
 ## Requirements
-- Ansible role for MySQL - (https://github.com/geerlingguy/ansible-role-mysql)
-- Ansible role for Apache 2.x - (https://github.com/geerlingguy/ansible-role-apache)
+- Ansible role for MySQL - https://github.com/geerlingguy/ansible-role-mysql
+- Ansible role for Apache 2.x - https://github.com/geerlingguy/ansible-role-apache
