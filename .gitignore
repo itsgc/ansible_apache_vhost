@@ -1,5 +1,5 @@
 main.yml
 mysql.yml
 apache.yml
-ansible_inventory
+ansible_hosts
 *.swp
