@@ -12,6 +12,6 @@ Currently uses ready-made roles. I need to find workarounds to a few issues, nam
 
 ## TODO
 Stuff that needs to happen:
-* Vhosts created on the fly from hostvars rather than hardcoded data in vars/*.yml
+* ~~ Vhosts created on the fly from hostvars rather than hardcoded data in vars/*.yml ~~ -- Done using the lookup from template functionality.
 * Php and PhpMyAdmin installation, with per-vhost visibility and custom path for phpmyadmin (avoid /phpmyadmin)
 * Consider adding support to pull vhost doc files from git
