@@ -1,9 +1,1 @@
 apache_listen_port: 80
-apache_vhosts:
-  - {   servername: example.loc,
-        documentroot: "/var/www/example.loc/public"
-    }
-  - {
-        servername: example2.loc,
-        documentroot: "/var/www/example2.loc/public"
-    }        

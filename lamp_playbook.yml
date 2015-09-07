@@ -1,15 +1,19 @@
  - hosts: vagrant
    sudo: yes
+   vars:
+       - vhosts: "{{ hostvars[inventory_hostname].enabled_vhosts }}"
    vars_files:
        - vars/mysql.yml
        - vars/apache.yml
-   roles:
+   pre_tasks: 
+       - set_fact: 
+            apache_vhosts: "{{ lookup('template', 'templates/apache_vhosts.j2')|from_yaml }}"
+       - debug: msg= "booh {{ item }}"
+         with_items: "{{ apache_vhosts }}"
+   roles: 
        - { role: geerlingguy.mysql }
        - { role: geerlingguy.apache }
    tasks:
        - name: "Create Document Roots"
          file: path={{ item.documentroot }} state=directory owner=apache group=apache mode=0775 recurse=yes
          with_items: "{{ apache_vhosts }}"
-       - name: "Print host facts"
-         debug: msg="These are the enabled virtual hosts for this server:{{ item }}"
-         with_items: "{{ hostvars[inventory_hostname].enabled_vhosts }}"

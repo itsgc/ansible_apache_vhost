@@ -1,0 +1,4 @@
+{% for vhost in vhosts %}
+    - servername: "{{ vhost }}"
+      documentroot: "/var/www/{{ vhost }}/public"
+{% endfor %}
